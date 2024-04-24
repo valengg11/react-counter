@@ -1,8 +1,8 @@
 import React from 'react';
-import { useSelector, useDispatch, Provider } from 'react-redux';
+import { useSelector, useDispatch } from 'react-redux';
 import { RootState, increment, decrement } from './store';
 
-const App: React.FC = () => {
+export default function App() {
   const count = useSelector((state: RootState) => state.counter);
   const dispatch = useDispatch();
 
@@ -15,5 +15,3 @@ const App: React.FC = () => {
     </div>
   );
 }
-
-export default App;
